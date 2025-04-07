@@ -10,11 +10,19 @@ class DashboardBinding extends Bindings {
   void dependencies() {
     // Dashboard controller
     Get.put<DashboardController>(DashboardController());
-    
+
     // Tab controllers - lazy loaded
-    Get.lazyPut<HomeController>(() => HomeController(), fenix: true);
-    Get.lazyPut<CategoriesController>(() => CategoriesController(), fenix: true);
-    Get.lazyPut<CartController>(() => CartController(), fenix: true);
-    Get.lazyPut<ProfileController>(() => ProfileController(), fenix: true);
+    Get.put<HomeController>(
+      HomeController(),
+    );
+    Get.put<CategoriesController>(
+      CategoriesController(),
+    );
+    Get.put<CartController>(
+      CartController(),
+    );
+    Get.put<ProfileController>(
+      ProfileController(),
+    );
   }
 }

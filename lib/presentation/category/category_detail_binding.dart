@@ -4,6 +4,6 @@ import 'category_detail_controller.dart';
 class CategoryDetailBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<CategoryDetailController>(() => CategoryDetailController());
+    Get.put<CategoryDetailController>(CategoryDetailController());
   }
 }

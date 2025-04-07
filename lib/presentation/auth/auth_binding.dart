@@ -6,8 +6,14 @@ import 'forgot_password/forgot_password_controller.dart';
 class AuthBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<LoginController>(() => LoginController(), fenix: true);
-    Get.lazyPut<RegisterController>(() => RegisterController(), fenix: true);
-    Get.lazyPut<ForgotPasswordController>(() => ForgotPasswordController(), fenix: true);
+    Get.put<LoginController>(
+      LoginController(),
+    );
+    Get.put<RegisterController>(
+      RegisterController(),
+    );
+    Get.put<ForgotPasswordController>(
+      ForgotPasswordController(),
+    );
   }
 }
